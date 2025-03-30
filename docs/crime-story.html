@@ -5,69 +5,115 @@
   <title>Crime in San Francisco During COVID-19</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f7fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    .container {
       max-width: 900px;
       margin: auto;
-      padding: 30px;
-      line-height: 1.6;
-      background-color: #fff;
+      padding: 40px 20px;
+      background-color: #ffffff;
+      box-shadow: 0 0 10px rgba(0,0,0,0.05);
     }
-    h1, h2, h3 {
+    h1 {
+      text-align: center;
       color: #2c3e50;
+      margin-bottom: 30px;
+    }
+    h2 {
+      color: #2c3e50;
+      margin-top: 40px;
+    }
+    h3 {
+      color: #34495e;
+      margin-top: 30px;
+    }
+    p {
+      line-height: 1.7;
     }
     iframe {
       width: 100%;
       border: none;
-      margin: 20px 0;
+      margin-top: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 0 6px rgba(0,0,0,0.1);
+    }
+    ul {
+      padding-left: 20px;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .tagline {
+      text-align: center;
+      font-style: italic;
+      color: #666;
+      margin-top: -20px;
+      margin-bottom: 40px;
     }
   </style>
 </head>
 <body>
+  <div class="container">
 
-  <h1>Crime in San Francisco: The COVID-19 Lockdown Impact</h1>
+    <h1>🔍 Crime in San Francisco: The COVID-19 Lockdown Impact</h1>
+    <p class="tagline">A visual data story exploring how pandemic policies changed crime patterns in the city</p>
 
-  <p><strong>Dataset:</strong> This story is based on the San Francisco Crime dataset from 2018–2022. It includes timestamps, crime categories, and districts where incidents were reported.</p>
+    <p><strong>Dataset:</strong> This story is based on the official San Francisco Crime dataset (2018–2022), containing timestamps, categories, and districts of reported incidents.</p>
 
-  <p>The COVID-19 pandemic had a massive impact on all aspects of life — including crime. San Francisco, which experienced strict lockdowns from <strong>March 17, 2020</strong> to <strong>June 15, 2021</strong>, showed notable shifts in crime patterns. Below are maps showing crime by district before, during, and after the lockdown period.</p>
+    <p>When San Francisco entered lockdown on <strong>March 17, 2020</strong>, its streets emptied and daily routines paused. But did crime stop too? This story unpacks the shifts in urban crime patterns caused by the pandemic — from the most dangerous hours of the day to which neighborhoods saw the biggest drops (or spikes).</p>
 
-  <h2>🗺️ Districts That Stayed Dangerous — Even During Lockdown</h2>
+    <h2>🗺️ Which Districts Stayed Unsafe During Lockdown?</h2>
+    <p>Even with strict movement restrictions, districts like <strong>Tenderloin</strong> and <strong>Southern</strong> continued reporting high crime. These areas, historically vulnerable due to social factors, didn’t quiet down like others. Meanwhile, residential zones like <strong>Richmond</strong> saw a sharp drop in activity.</p>
+    <iframe src="map_lockdown.html" height="500px"></iframe>
 
-  <iframe src="map_lockdown.html" height="500px"></iframe>
-  <p>Even during lockdown, districts like <strong>Tenderloin</strong> and <strong>Southern</strong> remained high-crime zones. However, the total number of incidents decreased citywide due to reduced public activity.</p>
+    <h2>📍 Before, During, and After Lockdown</h2>
+    <p>Compare how crime shifted spatially over time. While lockdowns led to an overall dip, patterns varied district by district.</p>
 
-  <h2>🕒 What Time of Day is Most Dangerous?</h2>
-  <p>We found that early evening hours (6–9 PM) were the most dangerous overall, even during lockdown. Crimes dropped sharply during curfews and early mornings, but picked back up when people ventured out for essentials or brief outdoor activities.</p>
+    <h3>🔹 Before Lockdown</h3>
+    <p>Pre-COVID crime was widespread, especially in commercial and nightlife hubs. Mobility meant opportunity for more incidents.</p>
+    <iframe src="map_prelockdown.html" height="500px"></iframe>
 
-  <h2>📅 Weekdays vs Weekends: When Do Crimes Spike?</h2>
-  <p>Traditionally, weekends see spikes in thefts, assaults, and alcohol-related crimes. During lockdown, weekend crimes dipped but remained slightly higher than weekday levels. Weekday crime patterns flattened, likely due to remote work and business closures.</p>
+    <h3>🔹 After Lockdown</h3>
+    <p>Post-June 2021, crime rose again — not quite returning to pre-pandemic levels, but shifting toward property and vehicle crimes as city activity resumed.</p>
+    <iframe src="map_postlockdown.html" height="500px"></iframe>
 
-  <h2>📊 Interactive Crime Explorer</h2>
-  <p>Use the interactive Bokeh plot below to filter crime by district, year, category, and day type (weekday/weekend) during the COVID lockdown period:</p>
-  <iframe src="bokeh_plot.html" height="700px"></iframe>
+    <h2>📊 Interactive Crime Explorer</h2>
+    <p>Use this dynamic chart to explore monthly crime counts by district, category, and day type. Try switching between "Tenderloin", "Southern", or "Richmond" to see the contrasts, and explore how weekday vs. weekend patterns differ across time.</p>
+    <iframe src="bokeh_plot.html" height="700px"></iframe>
 
-  <h2>📉 Crime Before vs During vs After Lockdown</h2>
+    <h2>🕒 What Time of Day Is Most Dangerous?</h2>
+    <p>Even during lockdown, <strong>6–9 PM</strong> remained the riskiest hours. People still ventured out in the evenings — and so did petty crime. Curfews and reduced nightlife lowered late-night incidents, but early evening still posed a threat.</p>
 
-  <h3>🔹 Before Lockdown</h3>
-  <iframe src="map_prelockdown.html" height="500px"></iframe>
-  <p>Before COVID-19, crime was common in commercial zones like Southern, Mission, and Tenderloin. These areas were active day and night, attracting a range of incidents.</p>
+    <h2>📅 Weekday vs Weekend Crime</h2>
+    <p>Weekends historically bring higher crime — nightlife, gatherings, and social events increase risk. During lockdown, this trend shrunk, but not evenly. Weekends still saw relatively more incidents in areas like Mission and Tenderloin.</p>
 
-  <h3>🔹 During Lockdown</h3>
-  <iframe src="map_lockdown.html" height="500px"></iframe>
-  <p>Crime decreased, but not evenly. Some districts remained high-risk due to persistent social issues like homelessness or drug trade.</p>
+    <h2>🧠 Key Takeaways</h2>
+    <ul>
+      <li><strong>Tenderloin</strong> remained the most high-crime district across all periods.</li>
+      <li>Safe zones included <strong>Park</strong>, <strong>Richmond</strong>, and <strong>Taraval</strong>.</li>
+      <li><strong>Evenings (6–9 PM)</strong> were the most dangerous time of day.</li>
+      <li><strong>Weekend crimes</strong> stayed slightly elevated, even in lockdown.</li>
+      <li><strong>Crime changed — but it didn’t disappear</strong>.</li>
+    </ul>
 
-  <h3>🔹 After Lockdown</h3>
-  <iframe src="map_postlockdown.html" height="500px"></iframe>
-  <p>Crimes increased again after June 2021. New trends emerged, with car break-ins and burglaries rising as people returned to public life.</p>
+    <h2>🔚 Final Thoughts</h2>
+    <p>The pandemic altered how and when crime occurred in San Francisco. While overall incidents fell, the resilience of some patterns highlights deep-rooted social and structural issues. Understanding these shifts can help design smarter urban policies in times of crisis and beyond.</p>
 
-  <h2>🔚 Conclusion</h2>
-  <p>COVID-19 significantly altered crime levels in San Francisco. While crime didn’t disappear, patterns shifted — revealing how deeply urban safety is tied to social and economic behavior. District-level analysis is key to understanding how cities respond to crisis and recovery.</p>
+    <h3>🔗 References</h3>
+    <ul>
+      <li><a href="https://www.sanfranciscopolice.org/" target="_blank">San Francisco Police Department</a></li>
+      <li><a href="https://www.sfchronicle.com/" target="_blank">San Francisco Chronicle</a></li>
+      <li><a href="https://data.sfgov.org/" target="_blank">SF Open Data Portal</a></li>
+    </ul>
 
-  <h3>🔗 References</h3>
-  <ul>
-    <li><a href="https://www.sanfranciscopolice.org/" target="_blank">San Francisco Police Department</a></li>
-    <li><a href="https://www.sfchronicle.com/" target="_blank">San Francisco Chronicle</a></li>
-    <li><a href="https://data.sfgov.org/" target="_blank">SF Open Data Portal</a></li>
-  </ul>
-
+  </div>
 </body>
 </html>
