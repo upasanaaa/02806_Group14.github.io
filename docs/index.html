@@ -93,10 +93,9 @@
     .pdf-button:hover {
       background-color: #154360;
     }
-    /* Custom CSS for crime plot wrapper */
     .crime-plot-wrapper {
       width: 100%;
-      height: 950px; 
+      height: 1000px; 
       overflow: hidden;
       position: relative;
       margin: 40px 0;
@@ -106,15 +105,14 @@
     }
     .crime-plot-wrapper iframe {
       position: absolute;
-      top: -50px;
+      top: -20px;
       left: -30px;
-      transform: scale(0.72);  /* Comfortable zoom level */
+      transform: scale(0.72);
       transform-origin: top left;
       width: 160%;
-      height: 160%; /* Adjust based on your actual plot height */
+      height: 160%;
       border: none;
     }
-    /* Map grid layout */
     .map-container {
       display: flex;
       justify-content: space-between;
@@ -162,11 +160,10 @@
 
   <p>The COVID-19 pandemic created a natural experiment for studying how crime patterns respond to major disruptions in urban life. Our analysis of six key crime categories reveals distinct responses to the lockdown measures.</p>
 
-  <!-- Custom wrapper for crime trend plots -->
   <div class="crime-plot-wrapper">
     <iframe src="crime_trend_plot.html" scrolling="no"></iframe>
   </div>
-  <p class="caption">Figure 1: Monthly incident counts for overall crime and five specific categories (Vehicle Theft, Vandalism, Burglary, Drug/Narcotic offenses, and Assault) from 2018-2022. Red vertical lines indicate the beginning (March 17, 2020) and end (June 15, 2021) of the lockdown period.</p>
+  <p class="caption">Figure 1: Monthly incident counts for overall crime and five specific categories (Vehicle Theft, Vandalism, Burglary, Drug/Narcotic offenses, and Assault) from 2018–2022. Red vertical lines indicate the beginning (March 17, 2020) and end (June 15, 2021) of the lockdown period.</p>
 
   <p>As shown in Figure 1, overall crime incidents dropped significantly when lockdown began, reflecting the sudden decrease in human activity across the city. However, not all crime categories responded the same way:</p>
 
@@ -184,7 +181,6 @@
 
   <p>The pandemic didn't just change how much crime occurred — it changed where it happened. The maps below show how the geographic distribution of crime shifted dramatically as the city's activity patterns transformed.</p>
 
-  <!-- Three maps displayed side by side -->
   <div class="map-container">
     <div class="map-box">
       <div class="map-title">Before Lockdown (2018-2020)</div>
@@ -205,9 +201,7 @@
 
   <ul>
     <li><strong>Pre-Lockdown (2018-2020):</strong> Crime was highly concentrated in the downtown corridor, Financial District, and SoMa area, with significant hotspots in tourist destinations like Union Square and Fisherman's Wharf. The Mission District also showed elevated crime levels, particularly on weekends.</li>
-    
     <li><strong>During Lockdown (2020-2021):</strong> Overall crime volume decreased, but the geographic distribution changed dramatically. Downtown areas saw the most significant drops (approximately 45% in the Central District), while the Tenderloin, parts of SoMa, and certain residential corridors maintained relatively higher crime rates.</li>
-    
     <li><strong>Post-Lockdown (2021-2023):</strong> Crime began returning to pre-pandemic patterns but with notable differences. New hotspots emerged in areas that previously had moderate crime levels, and the recovery was uneven across neighborhoods, with some areas seeing faster returns to pre-pandemic crime levels than others.</li>
   </ul>
 
@@ -216,16 +210,22 @@
   <h2>Exploring Temporal Patterns Interactively</h2>
 
   <p>Beyond geography, the pandemic fundamentally transformed <em>when</em> crimes occurred across San Francisco. As daily routines were disrupted, traditional crime cycles shifted in unexpected ways. The visualization below invites you to explore these temporal transformations yourself.</p>
-  
-  <p>This interactive tool reveals crime's hidden rhythms—how patterns of activity fluctuated throughout the year, differed between weekdays and weekends, and varied across neighborhoods during this unprecedented period. By filtering the data through multiple dimensions, you can uncover insights that static visualizations might miss.</p>
-  
+
+  <p>This interactive tool reveals crime's hidden rhythms — how patterns of activity fluctuated throughout the year, differed between weekdays and weekends, and varied across neighborhoods during this unprecedented period. By filtering the data through multiple dimensions, you can uncover insights that static visualizations might miss.</p>
+
   <p>For instance, try comparing the Northern district's weekend patterns before and during lockdown, or observe how the Mission's crime profile changed when restrictions lifted. Each combination tells a unique story about how specific communities experienced the pandemic's impact on public safety.</p>
-  
-  <iframe src="bokeh_plot.html" height="500px" width="100%"></iframe>
-  <p class="caption">Figure 3: Interactive visualization of crime trends by district, category, time period, and day type. Use the dropdown menus to explore different combinations and patterns.</p>
+
+  <!-- Updated Bokeh iframe block -->
+  <div class="figure">
+    <h3>Interactive Crime Visualization Dashboard</h3>
+    <div style="background-color: #ffffff; padding: 20px; border: 1px solid #ddd; box-shadow: 0 0 8px rgba(0,0,0,0.08); margin-top: 20px;">
+      <iframe src="bokeh_plot.html" style="width: 100%; height: 600px; border: none;"></iframe>
+      <p class="caption">Figure 3: Interactive visualization of crime trends by district, category, time period, and day type. Use the dropdown menus to explore different combinations and patterns.</p>
+    </div>
+  </div>
 
   <h2>Key Insights from the Data</h2>
-  
+
   <h3>Temporal Patterns</h3>
   <p>Even during lockdown, certain times of day consistently showed higher crime rates. Evening hours remained particularly problematic across most districts, suggesting that some temporal crime patterns persist regardless of mobility restrictions. This insight points to the need for targeted crime prevention efforts even when broader mobility is reduced.</p>
 
@@ -243,7 +243,7 @@
 
   <h2>Conclusion</h2>
   <p>This study of San Francisco crime during COVID-19 reveals how citywide disruptions affect public safety in complex ways. While overall crime decreased during lockdown, certain categories (notably vehicle theft) increased, and high-risk areas remained dangerous. This suggests that crime patterns adapt quickly to changing circumstances, with criminals finding new opportunities even during major societal disruptions.</p>
-  
+
   <p>For policymakers and public safety officials, these findings highlight the importance of flexible, data-driven approaches to crime prevention that can adapt to rapidly changing urban conditions. As San Francisco and other cities prepare for future disruptions—whether pandemics, natural disasters, or major policy shifts—understanding these adaptive crime patterns will be essential for creating more resilient and safer urban environments.</p>
 
   <h3>References</h3>
@@ -263,7 +263,5 @@
     <a href="Final_Crime_Report_UpasanaPaul.pdf" class="pdf-button" target="_blank">Download PDF Version</a>
   </div>
 
-
 </body>
 </html>
-  
