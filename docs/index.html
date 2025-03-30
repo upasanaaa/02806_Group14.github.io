@@ -11,7 +11,7 @@
       background-color: #f9f9f9;
       color: #333;
       line-height: 1.8;
-      max-width: 1200px;
+      max-width: 1600px;
       margin: auto;
       padding: 50px 25px;
     }
@@ -164,21 +164,20 @@
     .map-container {
       display: flex;
       justify-content: space-between;
-      margin: 40px 0;
-      gap: 25px;
+      gap:5px;
     }
     
     .map-box {
       flex: 1;
       position: relative;
       background: white;
-      padding-bottom: 15px;
       box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
     
     .map-box iframe {
       width: 100%;
-      height: 400px;
+      height: 500px;
+      object-fit:fill;
     }
     
     .map-caption {
@@ -194,7 +193,7 @@
     .map-title {
       font-weight: bold;
       font-size: 1.1em;
-      margin: 15px 0;
+      margin: 15px 15px;
       text-align: center;
       color: #2874A6;
     }
@@ -298,42 +297,39 @@
     
     <p>By the time restrictions lifted in June 2021, most crime categories were already trending back toward pre-pandemic levels, though with distinct recovery trajectories that reveal lasting impacts of the disruption.</p>
     
-    <h2>SHIFTING GEOGRAPHIES: WHERE CRIME MOVED</h2>
+    <h2>Mapping Crime Across Lockdown</h2>
     
-    <p>Perhaps most striking was how the pandemic reshaped crime's geographic footprint across San Francisco. As downtown emptied and residential occupancy increased, criminal activity redistributed itself in ways that challenge conventional understanding of urban crime patterns.</p>
-    
+    <p>To better understand how the pandemic shaped the distribution of crime across San Francisco, the total number of reported incidents in each police district during three different time periods was mapped. 
+      Each map uses color intensity to show the number of incidents per district darker shades indicate more reported crimes. 
+      This approach helps highlight that crime is not just a matter of “how much,” but also of “where.”</p>
+    <ul>
+      <li><strong>Before the pandemic</strong><span class="map-caption">(March 17. 2018 - June 15. 2020)</span></li>
+      
+      <li><strong>During the COVID-19 lockdown</strong><span class="map-caption">(March 17. 2020 - June 15. 2021)</span></li>
+      
+      <li><strong>After most restrictions were lifted</strong><span class="map-caption">(March 17. 2022 - June 15. 2023)</span></li>
+    </ul>
     <div class="map-container">
       <div class="map-box">
-        <div class="map-title">Before Lockdown (2018-2020)</div>
+       
         <iframe src="map_lockdown_before.html"></iframe>
-        <p class="map-caption">Crime concentrated in the downtown corridor, Financial District, and tourist zones prior to lockdown.</p>
+        <div class="map-title">Crime Before the COVID-19 Lockdown <br> (March 17. 2018 - June 15. 2020)</div>
       </div>
       
       <div class="map-box">
-        <div class="map-title">During Lockdown (2020-2021)</div>
         <iframe src="map_lockdown.html"></iframe>
-        <p class="map-caption">The pandemic dramatically altered crime distribution, with previously busy areas seeing significant drops while vulnerable neighborhoods remained problematic.</p>
+        <div class="map-title">Crime During the Lockdown Period <br> (March 17. 2020 - June 15. 2021)</div>
       </div>
       
       <div class="map-box">
-        <div class="map-title">After Lockdown (2021-2023)</div>
-        <iframe src="mmap_lockdown_after.html"></iframe>
-        <p class="map-caption">As restrictions eased, crime began returning to pre-pandemic patterns but with notable new hotspots emerging in previously moderate-risk areas.</p>
+        <iframe src="map_lockdown_after.html"></iframe>
+        <div class="map-title">Crime After Restrictions Were Lifted<br>(March 17. 2022 - June 15. 2023)</div>
       </div>
     </div>
     
-    <p>These maps reveal three distinct geographic narratives across time periods:</p>
-    
-    <ul>
-      <li><strong>Pre-Lockdown (2018-2020):</strong> Crime was highly concentrated in San Francisco's commercial heart—the downtown corridor, Financial District, and SoMa—with pronounced hotspots in tourist-heavy areas like Union Square and Fisherman's Wharf. The Mission District showed elevated weekend activity, reflecting its nightlife prominence.</li>
-      
-      <li><strong>During Lockdown (2020-2021):</strong> As downtown emptied, crime distribution fundamentally shifted. The Central District saw crime drop by nearly <span class="key-stat">45%</span>, while persistent hotspots remained in vulnerable areas like the Tenderloin. Certain residential corridors saw modest increases as crime adapted to new opportunity structures.</li>
-      
-      <li><strong>Post-Lockdown (2021-2023):</strong> The recovery period revealed an uneven return to pre-pandemic patterns. While traditional hotspots began reactivating, new concentrations emerged in areas that previously had moderate crime levels, suggesting lasting changes in the city's crime geography.</li>
-    </ul>
-    
-    <p>Most revealing is how high-vulnerability neighborhoods like the Tenderloin maintained elevated crime levels throughout all periods—suggesting that certain areas face persistent challenges regardless of broader urban conditions.</p>
-    
+    <p>E</p>
+
+ 
     <h2>TEMPORAL RHYTHMS: WHEN CRIME HAPPENS</h2>
     
     <p>Beyond where crime occurred, the pandemic fundamentally altered when it happened. As daily routines dissolved, traditional crime cycles transformed, revealing deeper patterns in criminal behavior. The interactive visualization below allows exploration of these temporal shifts across neighborhoods, crime types, and time periods.</p>
