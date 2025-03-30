@@ -97,17 +97,21 @@
     .crime-plot-wrapper {
       width: 100%;
       height: 800px; 
-      overflow: auto;
+      overflow: hidden;
       position: relative;
       margin: 30px 0;
       border: 1px solid #ddd;
       box-shadow: 0 0 8px rgba(0,0,0,0.05);
     }
     .crime-plot-wrapper iframe {
-      width: 100%;
-      height: 1200px; /* Adjust based on your actual plot height */
+      position: absolute;
+      top: -50px;
+      left: -50px;
+      transform: scale(0.6);  /* Comfortable zoom level */
+      transform-origin: top left;
+      width: 180%;
+      height: 180%; /* Adjust based on your actual plot height */
       border: none;
-      transform: none; /* No squishing */
     }
     /* Map grid layout */
     .map-container {
@@ -159,7 +163,7 @@
 
   <!-- Custom wrapper for crime trend plots -->
   <div class="crime-plot-wrapper">
-    <iframe src="crime_trend_plot.html" scrolling="yes"></iframe>
+    <iframe src="crime_trend_plot.html" scrolling="no"></iframe>
   </div>
   <p class="caption">Figure 1: Monthly incident counts for overall crime and five specific categories (Vehicle Theft, Vandalism, Burglary, Drug/Narcotic offenses, and Assault) from 2018-2022. Red vertical lines indicate the beginning (March 17, 2020) and end (June 15, 2021) of the lockdown period.</p>
 
