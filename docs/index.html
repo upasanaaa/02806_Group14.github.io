@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Crime in San Francisco: The COVID-19 Lockdown Impact</title>
+  <style>
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background-color: #f5f5f5;
+      color: #222;
+      line-height: 1.7;
+      max-width: 900px;
+      margin: auto;
+      padding: 50px 25px;
+    }
+    h1, h2, h3 {
+      color: #1c2833;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      margin-top: 2.5em;
+      font-size: 1.5em;
+    }
+    h3 {
+      margin-top: 1.8em;
+      font-size: 1.2em;
+    }
+    p {
+      margin-bottom: 1.2em;
+      font-size: 1.03em;
+    }
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+      margin: 30px 0;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    ul {
+      margin: 1em 0;
+      padding-left: 20px;
+    }
+    li {
+      margin-bottom: 8px;
+    }
+    a {
+      color: #1a5276;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .footer {
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid #ccc;
+      font-size: 0.95em;
+      color: #555;
+    }
+    .pdf-button {
+      display: inline-block;
+      padding: 10px 16px;
+      background-color: #1a5276;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .pdf-button:hover {
+      background-color: #154360;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Optional Header Banner -->
+  <!-- <img src="your-banner-image.jpg" alt="San Francisco Crime Banner" style="width: 100%; border-radius: 5px; margin-bottom: 30px;"> -->
+
+  <h1>Crime in San Francisco: The COVID-19 Lockdown Impact</h1>
+
+  <p>When San Francisco entered lockdown on March 17, 2020, life in the city changed overnight. Offices closed, streets emptied, and most people stayed home. These changes were expected to affect public safety and crime — but how, and to what extent? This story dives into crime data from 2018 to 2022 to answer that question.</p>
+
+  <p>By analyzing trends before, during, and after the lockdown period (March 2020 – June 2021), we uncover critical insights: crime did not disappear, but it transformed. For public agencies and city planners, understanding these changes is key to building more resilient and safer urban environments in both crisis and recovery.</p>
+
+  <h2>A Decline in Volume — But Not in Risk</h2>
+
+  <p>During the strict lockdown phase, overall crime volume fell across the city — a natural outcome of reduced human mobility. But this reduction wasn’t evenly distributed. High-crime districts like <strong>Tenderloin</strong> and <strong>Southern</strong> remained consistently dangerous.</p>
+
+  <p>Meanwhile, residential neighborhoods such as <strong>Richmond</strong>, <strong>Park</strong>, and <strong>Taraval</strong> became even safer. Their lower population density, limited nightlife, and stronger community presence may have contributed to the drop.</p>
+
+  <iframe src="map_lockdown.html"></iframe>
+
+  <h2>Crime Patterns Before and After Lockdown</h2>
+
+  <h3>Before Lockdown</h3>
+  <p>Crime was widespread, especially in commercial and transit zones. Activity was driven by movement — thefts near offices, pickpocketing downtown, and nightlife-related offenses.</p>
+  <iframe src="map_prelockdown.html"></iframe>
+
+  <h3>After Lockdown</h3>
+  <p>Following the reopening of the city in mid-2021, crime levels began to rise again. Property crimes such as car break-ins became more prominent, and new hotspots began to emerge.</p>
+  <iframe src="map_postlockdown.html"></iframe>
+
+  <h2>Exploring the Data Interactively</h2>
+
+  <p>This interactive visualization lets you explore monthly crime trends filtered by district, category, year, and day type. Use it to uncover how neighborhoods responded differently across time.</p>
+  <iframe src="bokeh_plot.html" height="700px"></iframe>
+
+  <h2>Evening Hours: A Persistent Danger</h2>
+  <p>The early evening hours (6–9 PM) remained the most dangerous time throughout all phases. This suggests a need to target crime prevention efforts even when broader mobility is reduced.</p>
+
+  <h2>Weekday vs. Weekend</h2>
+  <p>Despite closures, weekends still saw more incidents than weekdays in many districts. The Mission and Tenderloin in particular exhibited this trend — pointing to social behavior patterns that extend beyond open businesses or events.</p>
+
+  <h2>Key Observations</h2>
+  <ul>
+    <li>Tenderloin and Southern remained the highest crime zones before, during, and after lockdown.</li>
+    <li>6–9 PM consistently posed the greatest safety risks.</li>
+    <li>Weekend incidents remained higher than weekday levels, even during lockdown.</li>
+    <li>Crime dipped during lockdown but surged again with a change in type and location.</li>
+  </ul>
+
+  <h2>Conclusion</h2>
+  <p>This story shows how citywide policies shape public safety — but not always equally. By exploring how crime patterns shifted during the pandemic, we learn that structural vulnerabilities persist even under emergency conditions. Moving forward, data-informed decision-making will be key to more equitable safety planning in San Francisco and beyond.</p>
+
+  <h3>References</h3>
+  <ul>
+    <li><a href="https://www.sanfranciscopolice.org/" target="_blank">San Francisco Police Department</a></li>
+    <li><a href="https://www.sfchronicle.com/" target="_blank">San Francisco Chronicle</a></li>
+    <li><a href="https://data.sfgov.org/" target="_blank">SF Open Data Portal</a></li>
+  </ul>
+
+  <div class="footer">
+    <p><strong>Author:</strong> Upasana Paul(s242577)</p>
+    <p><strong>Date:</strong> March 30, 2025</p>
+    <a href="Final_Crime_Report_UpasanaPaul.pdf" class="pdf-button" target="_blank">Download PDF Version</a>
+  </div>
+
+</body>
+</html>
