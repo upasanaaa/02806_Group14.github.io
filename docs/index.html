@@ -93,6 +93,26 @@
     .pdf-button:hover {
       background-color: #154360;
     }
+    /* Custom CSS for crime plot wrapper */
+    .crime-plot-wrapper {
+      width: 100%;
+      height: 500px; 
+      overflow: hidden;
+      position: relative;
+      margin: 30px 0;
+      border: 1px solid #ddd;
+      box-shadow: 0 0 8px rgba(0,0,0,0.05);
+    }
+    .crime-plot-wrapper iframe {
+      position: absolute;
+      top: -150px;
+      left: 0;
+      width: 120%; /* Make it wider */
+      height: 250%; /* Adjust as needed */
+      border: none;
+      transform: scale(0.45); /* More horizontal compression */
+      transform-origin: top center;
+    }
     /* Map grid layout */
     .map-container {
       display: flex;
@@ -125,33 +145,6 @@
       font-weight: bold;
       color: #E74C3C;
     }
-    .img-container {
-      text-align: center;
-      margin: 30px auto;
-      width: 100%;
-    }
-    .img-container img {
-      width: 85%; /* Make image width 85% of container width */
-      border: 1px solid #ddd;
-      box-shadow: 0 0 12px rgba(0,0,0,0.1);
-      border-radius: 4px;
-    }
-    .interactive-section {
-      background-color: #f9f9f9;
-      padding: 25px;
-      border-radius: 8px;
-      margin: 40px 0;
-      border-left: 4px solid #3498DB;
-    }
-    .interactive-title {
-      color: #2874A6;
-      margin-top: 0;
-    }
-    .interactive-description {
-      font-style: italic;
-      color: #555;
-      margin-bottom: 20px;
-    }
   </style>
 </head>
 <body>
@@ -168,8 +161,9 @@
 
   <p>The COVID-19 pandemic created a natural experiment for studying how crime patterns respond to major disruptions in urban life. Our analysis of six key crime categories reveals distinct responses to the lockdown measures.</p>
 
-  <div class="img-container">
-    <img src="crime_trend_plot.png" alt="Crime trends visualization">
+  <!-- Custom wrapper for crime trend plots -->
+  <div class="crime-plot-wrapper">
+    <iframe src="crime_trend_plot.html" scrolling="no"></iframe>
   </div>
   <p class="caption">Figure 1: Monthly incident counts for overall crime and five specific categories (Vehicle Theft, Vandalism, Burglary, Drug/Narcotic offenses, and Assault) from 2018-2022. Red vertical lines indicate the beginning (March 17, 2020) and end (June 15, 2021) of the lockdown period.</p>
 
@@ -218,18 +212,16 @@
 
   <p>These geographic shifts highlight how crime patterns adapt to changing urban conditions. While high-vulnerability areas like Tenderloin remained problematic throughout all periods, other neighborhoods experienced significant fluctuations based on changing activity patterns and opportunity structures.</p>
 
-  <div class="interactive-section">
-    <h2 class="interactive-title">Exploring Temporal Patterns Interactively</h2>
+  <h2>Exploring Temporal Patterns Interactively</h2>
 
-    <p>Beyond geography, the pandemic fundamentally transformed <em>when</em> crimes occurred across San Francisco. As daily routines were disrupted, traditional crime cycles shifted in unexpected ways. The visualization below invites you to explore these temporal transformations yourself.</p>
-    
-    <p>This interactive tool reveals crime's hidden rhythms—how patterns of activity fluctuated throughout the year, differed between weekdays and weekends, and varied across neighborhoods during this unprecedented period. By filtering the data through multiple dimensions, you can uncover insights that static visualizations might miss.</p>
-    
-    <p>For instance, try comparing the Northern district's weekend patterns before and during lockdown, or observe how the Mission's crime profile changed when restrictions lifted. Each combination tells a unique story about how specific communities experienced the pandemic's impact on public safety.</p>
-    
-    <iframe src="bokeh_plot.html" height="400px" width="70%" style="border-radius: 4px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"></iframe>
-    <p class="caption">Figure 3: Interactive visualization of crime trends by district, category, time period, and day type. Use the dropdown menus to explore different combinations and patterns.</p>
-  </div>
+  <p>Beyond geography, the pandemic fundamentally transformed <em>when</em> crimes occurred across San Francisco. As daily routines were disrupted, traditional crime cycles shifted in unexpected ways. The visualization below invites you to explore these temporal transformations yourself.</p>
+  
+  <p>This interactive tool reveals crime's hidden rhythms—how patterns of activity fluctuated throughout the year, differed between weekdays and weekends, and varied across neighborhoods during this unprecedented period. By filtering the data through multiple dimensions, you can uncover insights that static visualizations might miss.</p>
+  
+  <p>For instance, try comparing the Northern district's weekend patterns before and during lockdown, or observe how the Mission's crime profile changed when restrictions lifted. Each combination tells a unique story about how specific communities experienced the pandemic's impact on public safety.</p>
+  
+  <iframe src="bokeh_plot.html" height="700px" width="100%"></iframe>
+  <p class="caption">Figure 3: Interactive visualization of crime trends by district, category, time period, and day type. Use the dropdown menus to explore different combinations and patterns.</p>
 
   <h2>Key Insights from the Data</h2>
   
